@@ -1,0 +1,15 @@
+
+@media print{ 
+	.statusbar{display: none !important}
+}
+
+.statusbar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--primary-statusbar-background-colour);
+}
+
+.statusbar > p {
+    margin: 0px;
+}

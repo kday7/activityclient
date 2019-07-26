@@ -1,0 +1,68 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <h1>Task Details</h1>
+
+    <h3>{{ task?.name }}</h3>
+
+    <br />
+
+    <form class="task-form" #myForm="ngForm">
+        <div class="form-group">
+            <label>Project: </label>
+            <select name="target-project" [(ngModel)]="destination" (ngModelChange)="targetChanged($event)" required>
+                <option *ngFor="let project of allProjects" [value]="project.identifier">{{project.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Name: </label>
+            <input name="name" [(ngModel)]="task.name" (ngModelChange)="nameChanged($event)" required />
+        </div>
+
+        <div class="form-group">
+            <label>Location: </label>
+            <input name="link" [(ngModel)]="task.location" required />
+        </div>
+
+        <div class="form-group">
+            <label>View: </label>
+            <input name="view" [(ngModel)]="task.view" required />
+        </div>
+
+        <div class="form-group">
+            <label>Category: </label>
+            <select name="category" [(ngModel)]="task.category" required>
+                <option *ngFor="let category of taskCategories" [value]="category.key">{{category.key}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Status: </label>
+            <select name="status" [(ngModel)]="task.status" required>
+                <option *ngFor="let status of taskStatuses" [value]="status">{{status.key}}</option>
+            </select>
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    <button id="edit-task-button" [disabled]="!myForm.form.valid"
+                            (click)="saveTask()" class="btn btn-primary">
+                        {{task.identifier ? 'Save' : 'Create'}}
+                    </button>
+                </td>
+                <td>&nbsp;</td>
+                <td><button *ngIf="task.identifier" id="delete-task-button" (click)="deleteTask()" class="btn btn-primary">Delete</button></td>
+                <td>&nbsp;</td>
+                <td>
+                  <button id="cancel-task-button" 
+                          (click)="cancelEdit()" class="btn btn-primary">Cancel</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>

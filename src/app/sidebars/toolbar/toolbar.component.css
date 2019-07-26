@@ -1,0 +1,48 @@
+
+/* Icon Bar */
+.icon-bar {
+	width: 48px;
+	height: 100hv;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	box-sizing: content-box;
+	border-collapse: separate;
+    line-height: 1;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.icon-bar > table {
+    box-sizing: content-box;
+    border-collapse: separate;
+    /* line-height: 1.5; */
+}
+
+.icon-bar > table > tbody {
+    box-sizing: content-box;
+}
+
+.icon-bar > table > tbody > tr {
+    box-sizing: content-box;
+}
+
+/* Icon Bar (Top) */
+.icon-bar-top {
+	background-color: var(--primary-hub-colour);
+	/* background-color: #6523b8; */
+	/* border: 1px dashed; */
+	/* align: center; */
+	padding-top: 15px;
+	top: 0;
+}
+
+/* Icon Bar (Bottom) */
+.icon-bar-bottom {
+	background-color: var(--primary-hub-colour);
+	/* background-color: #6523b8; */
+	/* border: 1px dashed; */
+	/* align: center; */
+	padding-bottom: 15px;
+	bottom: 15px;
+}

@@ -1,0 +1,83 @@
+<div class="icon-bar">
+
+    <div class="icon-bar icon-bar-top">
+
+        <table align="center">
+            <tbody>
+            <tr><td>&nbsp;</td></tr>
+
+            <tr *ngIf="taskCompletion">
+                <td align="center">
+                    <a (click)="completeCurrentTask()">
+                        <img data-toggle="tooltip" id="complete-current-task" src="assets/images/complete.png" width="19px" title="Complete current task">
+                    </a>
+                </td>
+            </tr>
+    
+            <tr>
+                <td align="center">
+                    <a (click)="editCurrentTask()">
+                        <img data-toggle="tooltip" id="edit-current-task" src="assets/images/edit.png" width="25px" title="Edit current task">
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <a routerLink="{{hub}}/notices">
+                        <img data-toggle="tooltip" id="notice-board" src="assets/images/notices.png" width="20px" title="Show Notice Board">
+                    </a>
+                </td>
+            </tr>
+
+            <tr *ngIf="archiving">
+                <td align="center">
+                    <a routerLink="{{hub}}/archive">
+                        <img data-toggle="tooltip" id="view-archive" src="assets/images/viewArchive.png" width="20px" title="View Archive">
+                    </a>
+                </td>
+            </tr>
+    
+            <!-- tr>
+                <td align="center">
+                    <a routerLink="{{hub}}/documents">
+                        <img data-toggle="tooltip" id="docs" src="assets/images/document.png" width="20px" title="Open documents file">
+                    </a>
+                </td>
+            </tr -->
+
+            <tr>
+                    <td align="center">
+                        <a routerLink="{{hub}}/projects">
+                            <img data-toggle="tooltip" id="maintenance" src="assets/images/maintenance.png" width="21px" title="Maintenance">
+                        </a>
+                    </td>
+                </tr>
+    
+            <tr>
+                <td align="center">
+                    <a routerLink="{{hub}}/settings">
+                        <img data-toggle="tooltip" id="settings" src="assets/images/settings.png" width="25px" title="Settings">
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="icon-bar icon-bar-bottom">
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <a routerLink="/">
+                            <img data-toggle="tooltip" id="settings" src="assets/images/home.png" width="25px" title="Settings">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

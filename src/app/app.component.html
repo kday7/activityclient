@@ -1,0 +1,24 @@
+
+<table [style.width.%]="98">
+  <tbody>
+    <tr>
+
+      <td class="sidebar-column" valign="top" width="290px">
+        <app-sidebar></app-sidebar>
+      </td>
+
+      <td halign="left" valign="top">
+        <router-outlet></router-outlet>
+      </td>
+
+    </tr>
+    <tr>
+      <td style="height: 25px;">
+        <div class="statusbar">
+          <p id="status">Ready...</p>
+        </div>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<h1>Archive</h1>
+
+<div style="max-width:500px" *ngFor="let project of projects">
+  <h3>{{ project.name }}</h3>
+  <table class="table table-sm">
+    <tbody>
+      <tr *ngFor="let task of project.tasks">
+        <td>{{ task.name }}</td>
+        <td (click)="openTaskForEditing(project.identifier, task.identifier, 'Y')" width="50px">
+          <img src="assets/images/editTaskHub.png" width="22px"/>
+        </td>
+        <td width="50px"><a routerLink="/{{hub}}/projects/{{project.identifier}}/tasks/{{task.identifier}}">View</a></td>
+      </tr>
+      <tr><td>
+        <button id="restore-project-{{project.identifier}}" 
+                class="btn btn-primary btn-small" 
+                (click)="restoreProject(project.identifier)">Restore</button>
+      </td></tr>
+    </tbody>
+  </table>
+</div>

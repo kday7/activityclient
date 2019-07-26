@@ -1,0 +1,27 @@
+<h3>Search</h3>
+
+<form class="search-form" #myForm="ngForm">
+    <div class="form-group">
+        <label><i>Search Text: </i></label><br/>
+        <input name="search-text" [(ngModel)]="searchText" required />
+    </div>
+
+    <button id="search-button" [disabled]="!myForm.form.valid"
+            (click)="search()" class="btn btn-primary">
+        Search
+    </button>
+</form>
+
+<h3>Results</h3>
+
+<table class="table table-bordered table-hover table-striped search-results">
+  <thead>
+    <tr><th>Project</th><th>Task</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of results"> 
+      <td>{{result.project}}</td>
+      <td><a [routerLink]="['/', hub, 'projects', result.projectId, 'tasks', result.taskId]">{{result.task}}</a></td>
+    </tr>
+  </tbody>
+</table>

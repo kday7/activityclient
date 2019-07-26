@@ -1,0 +1,6 @@
+@import '../../styles.css';
+
+.caption {
+    color: var(--primary-font-colour);
+    font-size: 20px;
+}

@@ -1,0 +1,160 @@
+/* Menu Bar */
+/*
+.app-name {
+	font-family: Calibri;
+	color: grey;
+	font-size: 16pt;
+}
+*/
+
+div.menu-bar {
+	background-color: #eeeeee;
+	width: 210px;
+	/* border-left: solid 1px lightgrey; */
+	padding-left: 3px;
+	height: 100hv;
+	position: fixed;
+	/* left: 20; */
+	top: 0;
+	bottom: 0;
+	/* Added after adding Bootstrap */
+	box-sizing: content-box;
+	border-collapse: separate;
+    line-height: 1;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.menu-bar > table {
+    box-sizing: content-box;
+    border-collapse: separate;
+    line-height: 1.25;
+}
+
+table.sidebar {
+	width: 270px;
+	height: 100hv;
+	/* border: 1px solid; */
+}
+
+table.sidebaritem {
+	display: none;
+}
+
+table.sidebaritem-active {
+	display: block;
+}
+
+.project    {
+	font-size: 13pt;
+	font-family: Calibri;
+	color: grey;
+	font-style: bold;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.link > a  {
+	font-size: 11pt;
+	font-family: Calibri;
+	color: darkgrey;
+	text-decoration: none;
+}
+
+.link > a.active  {
+	font-size: 11pt;
+	font-family: Calibri;
+	color: darkred;
+	text-decoration: none;
+}
+
+.link > a.active.task-status-TODO {
+	font-size: 11pt;
+	font-family: Calibri;
+	color: darkred;
+	text-decoration: none;
+}
+
+.link > a.active.task-status-HOLD {
+	font-size: 11pt;
+	font-family: Calibri;
+	color: darkred;
+	text-decoration: none;
+}
+
+.link > a.active.task-status-COMPLETE {
+	font-size: 11pt;
+	font-family: Calibri;
+	color: darkred;
+	text-decoration: line-through;
+}
+
+.link > a.task-status-TODO {
+	color: black;
+	font-size: 11pt;
+}
+
+.link > a.task-status-HOLD {
+	color: darkgrey;
+	font-size: 11pt;
+}
+
+.link > a.task-status-COMPLETE {
+	color: darkgrey;
+	text-decoration: line-through;
+	font-size: 11pt;
+}
+
+.tableitem  {
+	font-size: 11pt;
+	font-family: Calibri;
+	color: grey;
+	text-decoration: none;
+}
+
+.task-category-NOTE {
+	color: #ccbb33;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+.task-category-TASK {
+	color: green;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+.task-category-BUG {
+	color: red;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+.task-category-HOLD {
+	color: blue;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+
+#menubar-accordion .card {
+    border: 0;
+}
+
+#menubar-accordion .card-header {
+    background-color: #eeeeee;
+    color: grey;
+    width: 205px;
+    border: 0;
+    padding-bottom: 5px;
+}
+
+#menubar-accordion .card-header a {
+    color: grey;
+}
+
+#menubar-accordion .card-body {
+    background-color: #eeeeee;
+    padding-top: 0px;
+    padding-bottom: 7px;
+}

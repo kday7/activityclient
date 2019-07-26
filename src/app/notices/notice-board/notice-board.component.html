@@ -1,0 +1,25 @@
+<h1>Notice Board</h1>
+
+<div>
+  <button routerLink="/{{hub}}/notices/-1/edit" class="btn btn-primary">Add</button>
+</div>
+
+<br/>
+
+<div *ngFor="let notice of notices" class="pr-4">
+  <div class="card notices">
+    <div class="card-header">
+      {{notice.datePosted}}
+      <a routerLink="/{{hub}}/notices/{{notice.identifier}}/edit">
+        <img data-toggle="tooltip" id="edit-notice-{{notice.identifier}}" src="assets/images/edit.png" width="25px" title="Edit notice">
+      </a>
+      <a (click)="deleteNotice(notice.identifier)">
+        <img data-toggle="tooltip" id="delete-notice-{{notice.identifier}}" src="assets/images/delete.png" width="25px" title="Delete notice">
+      </a>
+    </div>
+    <div class="card-body">
+      <p>{{notice.detail}}</p>
+    </div>
+  </div>
+  <br/>
+</div>

@@ -1,0 +1,9 @@
+@import '../../../styles.css';
+
+h1, h2, h3, h2 > a, td > a {
+	color: var(--primary-font-colour);
+}
+
+.link > a.task-status-COMPLETE {
+	text-decoration: line-through;
+}

@@ -1,0 +1,58 @@
+
+<body>
+  <div class="menu-bar">
+    <table>
+      <tbody>
+      <tr><td>&nbsp;</td></tr>
+
+      <tr><td>
+        <table><tr>
+          <td>
+            <a routerLink="{{hub}}"><img src="{{logo}}" width="40px"/></a>
+          </td>
+          <td class="app-name" text="Activity Hub"><a routerLink="{{hub}}">{{ title }}</a></td>
+        </tr></table>
+      </td></tr>
+
+      <tr><td>
+        <div id="menubar-accordion">
+          <div class="card" *ngFor="let project of projects">
+
+            <div class="card-header">
+              <a class="card-link side-heading" role="button" data-toggle="collapse" data-parent="#menubar-accordion"
+                href="#{{project.view}}">{{ project.name }}</a>
+            </div>
+
+            <div id="{{project.view}}" class="collapse">
+              <div class="card-body">
+                <table>
+                  <tbody>
+                  <tr *ngFor="let task of project.tasks">
+                    <td>&nbsp;</td>
+                    <td class="task-category-{{ task.categoryEnum.key }}">{{task.categoryEnum.value}}</td>
+                    <td class="link">
+                      &nbsp;<a routerLink="{{hub}}/projects/{{project.identifier}}/tasks/{{task.identifier}}"
+                               routerLinkActive="active"
+                               class="task-status-{{ task.status.key }}">{{ task.name }}</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+                <a class="card-link side-heading" role="button" routerLink="{{hub}}/projects">...</a>
+            </div>
+          </div>
+        </div>
+
+      </td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</body>

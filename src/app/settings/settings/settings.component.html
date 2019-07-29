@@ -1,0 +1,24 @@
+<h1>Settings</h1>
+
+<table class="table table-sm">
+  <thead>
+    <tr><th>Name</th><th>Value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Server URL</td><td>{{serverUrl}}</td></tr>
+    <tr *ngFor="let prop of properties">
+      <td>{{prop.key}}</td>
+      <td>{{prop.value}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+    <tr>
+      <td>
+        <button id="server-shutdown-button" 
+                (click)="shutDownServer()" 
+                class="btn btn-primary">Shut Down Server</button>
+      </td>
+    </tr>
+</table>

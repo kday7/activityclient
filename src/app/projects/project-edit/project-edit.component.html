@@ -1,0 +1,56 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <h1>Project Details</h1>
+
+    <h3>{{ project?.name }}</h3>
+
+    <br />
+
+    <form class="project-form" #projectForm="ngForm">
+        <div class="form-group">
+            <label>Name: </label>
+            <input name="name" [(ngModel)]="project.name" (ngModelChange)="nameChanged($event)" required />
+        </div>
+
+        <div class="form-group">
+            <label>View: </label>
+            <input name="view" [(ngModel)]="project.view" required />
+        </div>
+
+        <div class="form-group">
+            <label>Group: </label>
+            <input name="group" [(ngModel)]="project.group" title="1=Personal, 2=Active, 3=Complete, 4=Action, 5=Miscellaneous" required/>
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                  <button id="edit-project-button" [disabled]="!projectForm.form.valid"
+                          (click)="saveProject()" class="btn btn-primary">
+                    {{project.identifier > 0 ? 'Save' : 'Create'}}
+                  </button>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <button *ngIf="project.identifier != -1" id="delete-project-button" 
+                          (click)="deleteProject()" class="btn btn-primary">Delete</button>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <button *ngIf="project.identifier != -1" id="archive-project-button" 
+                          (click)="archiveProject()" class="btn btn-primary">Archive</button>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <button id="cancel-project-button" 
+                          (click)="cancelEdit()" class="btn btn-primary">Cancel</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+

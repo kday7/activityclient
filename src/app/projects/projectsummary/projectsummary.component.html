@@ -1,0 +1,35 @@
+<h2>
+    Project Summary
+</h2>
+  
+<div class="summary-list">
+  <table>
+    <tbody>
+      <div  *ngFor="let project of projects">
+        <tr>
+          <!-- TODO: Link project to project component -->
+          <td><h3 class="summary-project">{{ project.name }}</h3></td>
+        </tr>
+        <tr>
+          <td>
+              <div class="task-summary">
+                <table>
+                  <tbody>
+                    <tr *ngFor="let task of project.tasks">
+                      <td>&nbsp;</td>
+                      <td class="summary-task">
+                        &nbsp;<a routerLink="/{{hub}}/projects/{{ project.identifier }}/tasks/{{ task.identifier }}" 
+                                class="task-status-{{ task.status.key }}">{{ task.name }}</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </td>
+        </tr>
+      </div>
+
+    </tbody>
+  </table>
+</div>
+  

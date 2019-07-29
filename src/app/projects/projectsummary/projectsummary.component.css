@@ -1,0 +1,20 @@
+@import '../../../styles.css';
+
+.summary-list {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.summary-project {
+    color: grey;
+    margin: 10px 0px 10px 0px;
+}
+
+.summary-task {
+    padding: 1px 0px 1px 10px;
+}
+
+.summary-task > a {
+    color: #333;
+    font-style: italic;
+}

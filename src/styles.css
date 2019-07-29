@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-hub-colour: #6523b8;
+	--border-hub-colour: #883ce5;
+    --primary-disabled-hub-colour: #8a45df;
+	--border-disabled-hub-colour: #883ce5;
+	--primary-font-colour: grey;
+	--primary-statusbar-background-colour: lightblue;
+}
+
+@media print{ 
+	.sidebar{ display: none !important }
+	.sidebar-column{ width: 0px !important }
+	html{ background-color: transparent }
+}
+
+.app-name > a {
+	font-family: Calibri;
+	color: var(--primary-font-colour);
+	font-size: 16pt;
+	/* text-decoration: none; */
+}
+
+html {
+	background-color: #fdfdfd;
+}
+
+p {
+	font-family: Calibri;
+	color: #333333;
+}
+
+h1, h2, h3, h4, h5	{
+	font-family: Calibri;
+	font-weight: normal;
+	color: var(--primary-font-colour);
+	margin-top: 21px;
+}
+
+.table-heading, .table-heading > a {
+	font-family: Calibri;
+	color: var(--primary-font-colour);
+	font-size: 16pt;
+	/* text-decoration: none; */
+}
+
+.table-data, .table-data > a {
+	font-family: Calibri;
+	color: var(--primary-font-colour);
+	font-size: 14pt;
+	/* text-decoration: none; */
+}
+.btn-primary {
+    background-color: var(--primary-hub-colour);
+    border-color: var(--border-hub-colour);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: var(--primary-disabled-hub-colour);
+    border-color: var(--border-disabled-hub-colour);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hub-colour);
+    border-color: var(--border-hub-colour);
+}
+
+.btn-compact {
+    padding: 0;
+    color: #666666;
+}
+
+td {
+	color: #333333;
+	font-size: 14px;
+}
+
+th > tr > td {
+	background-color: #dddddd;
+}
+
+dt {
+	padding: 3px;
+	font-style: italic;
+}
+
+dd {
+	padding: 3px;
+}
+
+.spacer  {
+	height: 75px;
+}
+
+.spacer-small  {
+	height: 25px;
+}
+
+.quote {
+	font-style: italic;
+	border-left: solid red 1px;
+	padding: 2px 1px 2px 7px;
+	margin-left: 20px;
+}
+
+.task-category-NOTE {
+	color: #ccbb33;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+.task-category-TASK {
+	color: green;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+.task-category-BUG {
+	color: red;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+.task-category-HOLD {
+	color: blue;
+	font-size: 11pt;
+	font-style: italic;
+}
+
+/*******
+*  Links
+********/
+
+/* Links to User Guides */
+.guide {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 110px;
+}
+
+.guide > p {
+	margin: 2px;
+}
+
+.guide > a > img {
+	width: 60px;
+}
+
+/* Links to WiKi Pages */
+.wiki {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 110px;
+}
+
+.wiki > p {
+	margin: 2px;
+}
+
+.wiki > a > img {
+	width: 60px;
+}
+
+.wiki > form > input {
+	width: 60px;
+}
+
+/*	Command line */
+.command-line {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0px 5px 15px 5px;
+    padding: 5px;
+    border: 2px solid grey;
+    border-style: outset;
+    background-color: var(--primary-hub-colour);
+}
+
+.command-line > p {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.command-line > pre {
+    margin: 0px;
+    color: white;
+}
+
+.command-line > pre > code {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+/**************
+*  Notice board
+***************/
+
+.notices > .card-header {
+    background-color: var(--primary-hub-colour);
+    color: white;
+}
+
+.notices > .card-body > p {
+	white-space: pre;
+	white-space: pre-line;
+}

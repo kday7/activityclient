@@ -1,0 +1,35 @@
+<h1>Activities</h1>
+
+<div>
+
+    <table class="table" [style.width.px]="850">
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Link</th><th>Icon</th><th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of activities">
+          <td>{{activity.identifier}}</td>
+          <td>{{activity.name}}</td>
+          <td>{{activity.url}}</td>
+          <td>{{activity.icon}}</td>
+          <td>
+            <a routerLink="/{{hub}}/activities/{{activity.identifier}}/edit">
+              <img data-toggle="tooltip" id="edit-activity-{{activity.identifier}}" src="assets/images/edit{{hub}}.png" width="25px" title="Edit activity">
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button id="create-activity-button" 
+                    routerLink="/{{hub}}/activities/-1/edit" 
+                    class="btn btn-primary">New</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+</div>

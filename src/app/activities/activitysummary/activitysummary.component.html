@@ -1,0 +1,21 @@
+<h3>Daily Activities</h3>
+
+<div>
+  <ul class="tasklist">
+    <li *ngFor="let activity of activities">
+      <a href="{{ activity.url }}" text="{{ activity.name }}">{{ activity.name }}</a>
+    </li>
+  </ul>
+
+  <table>
+    <tr>
+      <td>
+        <button routerLink="/{{hub}}/activities" class="btn btn-sm btn-primary">Edit</button>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+          <button (click)="openActivitiesFile()" class="btn btn-sm btn-primary">Open</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+
+<p>&nbsp;</p>
+
+<div class="wizard">
+  <a [routerLink]="['daily-activities']" routerLinkActive="active">Activities</a>
+  <a [routerLink]="['search']" routerLinkActive="active">Search</a>
+</div>
+
+<router-outlet></router-outlet>
